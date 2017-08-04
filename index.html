@@ -5,35 +5,48 @@
 <title>JavaScript</title>
 <script language="javascript">
 
-	// Variable
+	// // Variable
+	//
+	//
+	// // Functions
+	//
+	// function power(a, b) {
+	// 	if (a % 2 ==  0) {
+	// 		var answerA = (a * a * a)
+	// 	} else {
+	// 		answerA = (a * a)
+	// 	}
+	//
+	// 	if (b % 2 ==  0) {
+	// 		var answerB = (b * b * b)
+	// 	} else {
+	// 		answerB = (b * b)
+	// 	}
+	//
+	// 		var value = console.log("For a = ", a, "and b = ", b, "value = ", answerA * answerB);
+	// }
+	// // Console Log
+	// power(2, 3)
+	// power(7, 13)
+	// power(27, 155)
+	// power(56, 3450)
 
-
-	// Functions
-
-	function power(a, b) {
-		if (a % 2 ==  0) {
-			var answerA = (a * a * a)
-		} else {
-			answerA = (a * a)
-		}
-
-		if (b % 2 ==  0) {
-			var answerB = (b * b * b)
-		} else {
-			answerB = (b * b)
-		}
-
-			var value = console.log("For a = ", a, "and b = ", b, "value = ", answerA * answerB);
+	function displayInput() {
+		var inputCTRL = document.getElementById('theText');
+		var theValue = inputCTRL.value;
+		var outputCTRL = document.getElementById('theTarget')
+		outputCTRL.value = theValue;
+		console.log(theValue);
 	}
-	// Console Log
-	power(2, 3)
-	power(7, 13)
-	power(27, 155)
-	power(56, 3450)
 
 </script>
 </head>
 
 <body>
+	<label>This is a label</label>
+	<input id="theText" type="text" name="" value="">
+	<button onclick="displayInput();">Click Me!</button>
+	</p></p>
+	<input id="theTarget" type="text" value="">
 </body>
 </html>
