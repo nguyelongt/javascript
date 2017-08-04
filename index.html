@@ -6,15 +6,30 @@
 <script language="javascript">
 
 	// Variable
-	 	//None
+
+
 	// Functions
+
 	function power(a, b) {
-			var value = console.log("For a = ", a, "and b = ", b, "value = ", (a*a) * (b*b));
+		if (a % 2 ==  0) {
+			var answerA = (a * a * a)
+		} else {
+			answerA = (a * a)
+		}
+
+		if (b % 2 ==  0) {
+			var answerB = (b * b * b)
+		} else {
+			answerB = (b * b)
+		}
+
+			var value = console.log("For a = ", a, "and b = ", b, "value = ", answerA * answerB);
 	}
 	// Console Log
 	power(2, 3)
 	power(7, 13)
 	power(27, 155)
+	power(56, 3450)
 
 </script>
 </head>
