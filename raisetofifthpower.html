@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script lang="javascript">
+      function raiseToFifthPower() {
+        var theNumber = document.getElementById('number');
+        var nmbRaised = theNumber.value ** 5;
+        var theAnswer = document.getElementById('answer');
+        theAnswer.innerText = nmbRaised;
+
+      }
+    </script>
+  </head>
+  <body>
+    <label>Enter a number:</label>
+    <input id="number" type="text" name="" value="3">
+    <button onclick="raiseToFifthPower()" type="button" name="button">Go</button>
+    <label id="answer"></label>
+  </body>
+</html>
