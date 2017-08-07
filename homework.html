@@ -31,28 +31,24 @@
           startingValue = startingValue + Number(number);
           storedValue.value = startingValue;
 
-          var originalColor = document.getElementById("results");
-              originalColor.style.color = "blue";
+
+                storedValue.style.color = "blue";
           if (startingValue % 2 == 0) {
             var results = document.getElementById("results");
-                results.innerText = startingValue;
-                results.style.color = "red";
+                storedValue.style.color = "red";
             }
 
-          var originalFontStyle = document.getElementById("results");
-              originalColor.style.fontStyle = "normal";
+
+                storedValue.style.fontStyle = "normal";
           if (startingValue % 3 == 0) {
             var results = document.getElementById("results");
-                results.innerText = startingValue;
-                results.style.fontStyle = "italic";
+                storedValue.style.fontStyle = "italic";
           }
 
-          var originalFontSize = document.getElementById("results");
-              originalColor.style.fontSize = "1em";
+                storedValue.style.fontSize = "1em";
           if (startingValue % 7 == 0) {
             var results = document.getElementById("results");
-                results.innerText = startingValue;
-                results.style.fontSize = "1.5em";
+                storedValue.style.fontSize = "1.5em";
           }
 
         }
@@ -63,6 +59,5 @@
     <button id="subtractbtn" onclick="onScreenBtn(-1)" type="button" name="button">-</button>
     <input id="startingnumber" name="" value="0"></input>
     <button id="addbtn" onclick="onScreenBtn(1)" type="button" name="button">+</button>
-    <label id="results"></label>
   </body>
 </html>
