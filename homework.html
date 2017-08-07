@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      input {
+        text-align: center;
+      }
+    </style>
+    <script lang="javascript">
+
+      // Black by default
+      // Number % 2 == 0 (Red)
+      // Number % 3 == 0 (Italic)
+      // Number % 7 == 0 (1.5em)
+
+      // Variable
+      var startingValue = 0;
+
+
+      function onScreenBtn(number) {
+          // Stored Value = 0
+          var storedValue = document.getElementById("startingnumber");
+          startingValue = startingValue + Number(number)
+          storedValue.value = startingValue;
+
+          var originalColor = document.getElementById("results");
+              originalColor.style.color = "blue";
+          if (startingValue % 2 == 0) {
+            var results = document.getElementById("results");
+                results.innerText = startingValue;
+                results.style.color = "red";
+            }
+
+          var originalFontStyle = document.getElementById("results");
+              originalColor.style.fontStyle = "normal";
+          if (startingValue % 3 == 0) {
+            var results = document.getElementById("results");
+                results.innerText = startingValue;
+                results.style.fontStyle = "italic";
+          }
+
+          var originalFontSize = document.getElementById("results");
+              originalColor.style.fontSize = "1em";
+          if (startingValue % 7 == 0) {
+            var results = document.getElementById("results");
+                results.innerText = startingValue;
+                results.style.fontSize = "1.5em";
+          }
+
+        }
+
+    </script>
+  </head>
+  <body>
+    <button id="subtractbtn" onclick="onScreenBtn(-1)" type="button" name="button">-</button>
+    <input id="startingnumber" name="" value="0"></input>
+    <button id="addbtn" onclick="onScreenBtn(1)" type="button" name="button">+</button>
+    <label id="results"></label>
+  </body>
+</html>
