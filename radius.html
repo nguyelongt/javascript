@@ -13,25 +13,30 @@
   </style>
 
   <body>
-    <label>Enter Number</label>
+    <label>Enter Radius</label>
     <br>
-    <input id="userInput" type="text" name="" value="6">
+    <input id="userInput" type="text" name="" value="5">
     <br>
-    <button onclick="calculateFunction()">Calculate</button>
+    <button onclick="calculateRadius()">Calculate</button>
     <br>
     <input id="answerField" type="text">
 
     <script lang="javascript">
-            function calculateFunction() {
+
+
+            function calculateRadius() {
 
               var inputValue = document.getElementById("userInput");
               var answerField = document.getElementById("answerField");
               var storedValue = Number(inputValue.value);
 
 
-              for (var idx = 0; storedValue > 0; storedValue--) {
-                    idx += storedValue //idx = storedValue + idx;
-                    answerField.value = idx;
+              var square = storedValue * storedValue;
+              var pie = 3.14151927
+
+              for (idx = 0; storedValue > idx; idx++) {
+                    radius = pie * square;
+                    answerField.value = radius;
               }
             }
     </script>
