@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style media="screen">
+    body, input {
+      text-align: center;
+    }
+
+  </style>
+  <p>List of Names:</p>
+  <p id="namesPara"></p>
+
+  <body>
+
+
+    <script lang="javascript">
+        // Locator
+        var documentPara = document.getElementById('namesPara')
+
+        // Array
+        var names = ["Hoai", "Hyeon", "Hai", "Hung"]
+
+        // Comma
+        var comma = ' ';
+
+        for (var i = 0; i < names.length; i++) {
+            var name = names[i];
+            documentPara.textContent += comma + ' ' + name;
+            comma = ',';
+        }
+
+    </script>
+  </body>
+</html>
