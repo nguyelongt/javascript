@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style media="screen">
+    body, input {
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+    <label>Enter Number</label>
+    <br>
+    <input id="userInput" type="text" name="" value="6">
+    <br>
+    <button onclick="calculateFunction()">Calculate</button>
+    <br>
+    <input id="answerField" type="text">
+
+    <script lang="javascript">
+            function calculateFunction() {
+
+              var inputValue = document.getElementById("userInput")
+              var answerField = document.getElementById("answerField");
+              var storedValue = Number(inputValue.value);
+
+
+              for (var idx = 0; storedValue > 0; storedValue--) {
+                    idx = storedValue + idx;
+                    answerField.value = idx;
+              }
+        }
+    </script>
+  </body>
+</html>
