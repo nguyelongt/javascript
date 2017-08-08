@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style>
+    body, input {
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+    <p>While Loop</p>
+    <label id='arrayList'></label>
+
+    <script lang="javascript">
+
+      var array = [];
+      var done = false;
+      var i = 1;
+      var count = 0;
+
+      function eleID(id) {
+        return document.getElementById(id);
+      }
+
+      while (!done) {
+        if (i % 11 == 0 || i % 13 == 0) {
+          count++; // Increment the counter
+          array.push(i); // Push number to Array
+        }
+
+        if (count == 20) {
+          done = true;
+        } else {
+          i++;
+        }
+      }
+
+      eleID('arrayList').textContent = 'The number is ' + i + ' and the numbers are: ' + array.join(' ');
+
+    </script>
+  </body>
+</html>
