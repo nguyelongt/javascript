@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style>
+    body, input {
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+    <p>Fibonacci Numbers</p>
+    <label id='arrayList'>Fibonacci Numbers Placeholder</label>
+
+    <script lang="javascript">
+
+      var array = [1, 2];
+
+      function eleID(id) {
+          return document.getElementById(id);
+      }
+
+      for (i = 0; i < 10 ; i++) {
+        var sequence = array[array.length-1] + array[array.length-2];
+        array.push(sequence);
+        eleID('arrayList').textContent = array;
+      }
+
+    </script>
+  </body>
+</html>
