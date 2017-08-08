@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style>
+    body, input {
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+    <p id="arrPara">Array Placeholder</p>
+    <button onclick="generateArray()" type="button">Calculate!</button>
+    <br><br>
+    <input id="arrTotal" type="text" value="">
+    <br><br>
+    <input id="arrAverage" type="text" value="">
+
+
+    <script lang="javascript">
+      // Variable
+      var arr = [];
+      var arrPlaceHolder = document.getElementById("arrPara");
+      var arrTotal = document.getElementById("arrTotal");
+      var arrAverage = document.getElementById("arrAverage");
+
+      function generateArray() {
+          arr = [];
+          for (i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 11));
+            var arrJoined = arr.join();
+            arrPlaceHolder.textContent = arrJoined;
+          }
+          totalArray();
+      }
+
+      function totalArray() {
+          var total = 0;
+          var average = 0;
+
+          for (i = 0; i < arr.length; i++) {
+            total += arr[i];
+            var totalAvg = total / arr.length;
+          }
+          arrTotal.value = total;
+          arrAverage.value = totalAvg;
+      }
+
+
+    </script>
+  </body>
+</html>
