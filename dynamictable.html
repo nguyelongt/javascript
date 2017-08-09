@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="dynamictable.js" type="text/javascript">
+    </script>
+  </head>
+
+  <style>
+    table {
+      font-family: cursive;
+      width: 100%;
+      text-align: center;
+      color: #7b68ee
+    }
+
+    input {
+      color: #708090;
+      width: 30%;
+      text-align: center;
+    }
+
+    td {
+      border: green solid .5pt;
+    }
+
+    tr:nth-child(even) {
+      background: #6495ed;
+    }
+
+    p {
+      text-align: center;
+      color: #6495ed;
+    }
+
+    body {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <p>Enter the follow information below</p>
+    <input id="nameInput" class="inputBox" type="text" placeholder="Name"></input>
+    <input id="emailInput" class="inputBox" type="text" placeholder="Email"></input>
+    <input id="cellInput" class="inputBox" type="text" placeholder="Cell Phone"></input>
+    <br><br>
+    <button id="addFriendsButton" type="button" onclick="addFriendsBtnFunction()">Add Friends
+    </button>
+    <br><br>
+    <table>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+      <script lang="javascript">
+      </script>
+
+  </body>
+</html>
